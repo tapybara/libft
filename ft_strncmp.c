@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 18:02:33 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/21 18:50:28 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/21 23:59:44 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,39 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
+	const unsigned char	*str1;
+	const unsigned char	*str2;
+
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
 	while (n--)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		if (*str1 != *str2 || *str1 == '\0' ||  *str2 == '\0' )
+			return (*str1 - *str2);
+		str1++;
+		str2++;
 	}	
 	return (0);
 }
 
-/*
+
 #include <stdio.h>
 #include <string.h>
 
 int main()
 {
-	char a1[] = "abcde";
-	
     printf("%s : %s\n", "ft", "lib");
+
+    //char	*s1 = "\200";
+	//char	*s2 = "\0";
+    //printf("%d : %d\n", ft_strncmp(s1, s2, 1), strncmp(s1, s2, 1));
+
+    char	*s1 = "atoms\0\0\0\0";
+	char	*s2 = "atoms\0abc";
+	size_t  size = 8;
+    printf("%d : %d\n", ft_strncmp(s1, s2, size), strncmp(s1, s2, size));
+
+	char a1[] = "abcde";
     printf("%d : %d\n", ft_strncmp(a1, "abcde", 5), strncmp(a1, "abcde", 5));
     printf("%d : %d\n", ft_strncmp(a1, "abcdd", 5), strncmp(a1, "abcdd", 5));
     printf("%d : %d\n", ft_strncmp(a1, "abcdf", 5), strncmp(a1, "abcdf", 5));
@@ -44,4 +58,4 @@ int main()
     //printf("%d\n", ft_strncmp(a1, a1, NULL));	//Error(Review check)
     //printf("%d\n", strncmp(a1, a1, NULL));	//Error(Review check)
     return (0);
-}*/
+}
