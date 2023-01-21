@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 12:31:57 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/21 18:00:24 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/21 18:52:45 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*p;
-	
+
 	p = s + ft_strlen(s);
 	while (p >= s)
 	{
