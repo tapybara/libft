@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 18:02:33 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/21 23:59:44 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/22 00:06:23 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	str2 = (const unsigned char *)s2;
 	while (n--)
 	{
-		if (*str1 != *str2 || *str1 == '\0' ||  *str2 == '\0' )
+		if (*str1 != *str2 || *str1 == '\0' || *str2 == '\0')
 			return (*str1 - *str2);
 		str1++;
 		str2++;
@@ -29,7 +29,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -58,4 +58,4 @@ int main()
     //printf("%d\n", ft_strncmp(a1, a1, NULL));	//Error(Review check)
     //printf("%d\n", strncmp(a1, a1, NULL));	//Error(Review check)
     return (0);
-}
+}*/

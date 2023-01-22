@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:09:04 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/21 21:20:35 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/22 00:09:40 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char *str1;
-	const unsigned char *str2;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
 
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	
-	while(n--)
+	while (n--)
 	{
-		if(*str1 != *str2)
+		if (*str1 != *str2)
 			return (*str1 - *str2);
 		str1++;
 		str2++;
@@ -38,16 +37,16 @@ int main()
 {
 	char s1[] = "abcde";
 
-    printf("%s : %s\n", "ft", "lib");
-    printf("%d : %d\n", ft_memcmp(s1, "abcde", 5), memcmp(s1, "abcde", 5));
-    printf("%d : %d\n", ft_memcmp(s1, "abcdd", 5), memcmp(s1, "abcdd", 5));
-    printf("%d : %d\n", ft_memcmp(s1, "abcdf", 5), memcmp(s1, "abcdf", 5));
-    printf("%d : %d\n", ft_memcmp(s1, "abcdd", 0), memcmp(s1, "abcdd", 0));
-    //printf("%d\n", ft_memcmp(s1, NULL, 5));	//segfa
-    //printf("%d\n", memcmp(s1, NULL, 5));		//segfa
-    //printf("%d\n", ft_memcmp(NULL, s1, 5));	//segfa
-    //printf("%d\n", memcmp(NULL, s1, 5));		//segfa
-    //printf("%d\n", ft_memcmp(s1, s1, NULL));	//Error(Review check)
-    //printf("%d\n", memcmp(s1, s1, NULL));		//Error(Review check)
-    return (0);
+	printf("%s : %s\n", "ft", "lib");
+	printf("%d : %d\n", ft_memcmp(s1, "abcde", 5), memcmp(s1, "abcde", 5));
+	printf("%d : %d\n", ft_memcmp(s1, "abcdd", 5), memcmp(s1, "abcdd", 5));
+	printf("%d : %d\n", ft_memcmp(s1, "abcdf", 5), memcmp(s1, "abcdf", 5));
+	printf("%d : %d\n", ft_memcmp(s1, "abcdd", 0), memcmp(s1, "abcdd", 0));
+	//printf("%d\n", ft_memcmp(s1, NULL, 5));	//segfa
+	//printf("%d\n", memcmp(s1, NULL, 5));		//segfa
+	//printf("%d\n", ft_memcmp(NULL, s1, 5));	//segfa
+	//printf("%d\n", memcmp(NULL, s1, 5));		//segfa
+	//printf("%d\n", ft_memcmp(s1, s1, NULL));	//Error(Review check)
+	//printf("%d\n", memcmp(s1, s1, NULL));		//Error(Review check)
+	return (0);
 }*/
