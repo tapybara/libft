@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 12:31:57 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/21 18:52:45 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 00:18:09 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	p = s + ft_strlen(s);
 	while (p >= s)
 	{
-		if (*p == c)
+		if (*p == (char)c)
 			return ((char *)p);
 		p--;
 	}

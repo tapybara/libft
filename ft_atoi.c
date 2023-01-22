@@ -6,13 +6,13 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 11:57:59 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/22 17:37:42 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 00:08:48 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	judge_sign(const char **str, int *sign)
+static void	preprocess(const char **str, int *sign)
 {
 	while (**str == ' ' || ('\t' <= **str && **str <= '\r'))
 		(*str)++;
@@ -31,8 +31,8 @@ int	ft_atoi(const char *str)
 
 	num = 0;
 	sign = 1;
-	judge_sign(&str, &sign);
-	while (*str != '\0' && '0' <= *str && *str <= '9')
+	preprocess(&str, &sign);
+	while (*str != '\0' && ft_isdigit(*str))
 	{
 		if (num > LONG_MAX / 10
 			|| (num == LONG_MAX / 10 && (*str - '0') > LONG_MAX % 10))

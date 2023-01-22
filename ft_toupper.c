@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 01:13:21 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/21 10:14:55 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 00:02:16 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 int	ft_toupper(int c)
 {
 	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
+		return (c - ('a' - 'A'));
+	return (c);
 }
 
 /*

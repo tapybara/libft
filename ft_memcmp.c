@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:09:04 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/22 00:09:40 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 00:11:11 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*str1;
-	const unsigned char	*str2;
+	const unsigned char	*str1 = (unsigned char *)s1;
+	const unsigned char	*str2 = (unsigned char *)s2;
 
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
 	while (n--)
 	{
 		if (*str1 != *str2)

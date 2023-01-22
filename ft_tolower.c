@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 01:18:17 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/21 10:14:35 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 00:02:06 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
-		return (c + 32);
-	else
-		return (c);
+		return (c + ('a' - 'A'));
+	return (c);
 }
 
 /*
