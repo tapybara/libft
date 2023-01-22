@@ -6,14 +6,15 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 01:44:28 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/21 22:37:19 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/22 14:17:28 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
+# include <stdlib.h>	//For size_t
+# include <limits.h>	//For LONG_MAX & LONG_MIN
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -36,4 +37,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int		ft_atoi(const char *str);
 #endif
