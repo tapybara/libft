@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 11:57:59 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/23 00:08:48 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 00:43:01 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ static void	preprocess(const char **str, int *sign)
 	if (**str == '-' || **str == '+')
 	{
 		if (**str == '-')
+		{
 			*sign = -1;
 			(*str)++;
+		}
 	}
 }
 
