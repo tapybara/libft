@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 11:57:59 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/23 00:43:01 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 19:01:43 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ static void	preprocess(const char **str, int *sign)
 	if (**str == '-' || **str == '+')
 	{
 		if (**str == '-')
-		{
 			*sign = -1;
-			(*str)++;
-		}
+		(*str)++;
 	}
 }
 
@@ -53,6 +51,11 @@ int	ft_atoi(const char *str)
 /*
 #include <stdio.h>
 
+int	ft_isdigit(int c)
+{
+	return ('0' <= c && c <= '9');
+}
+
 int main(void)
 {
 	char s1[] = "     -29847";
@@ -66,9 +69,13 @@ int main(void)
 	printf("FT %d :STD %d\n", ft_atoi(s3), atoi(s3));
 	printf("FT %d :STD %d\n", ft_atoi(s4), atoi(s4));
 	printf("FT %d :STD %d\n", ft_atoi(s5), atoi(s5));
+	
+	// Libft^tester-tokyo: tests
+	printf("FT %d :STD %d\n", ft_atoi("+1"), atoi("+1"));
+	printf("FT %d :STD %d\n", ft_atoi("+7"), atoi("+7"));
+	printf("FT %d :STD %d\n", ft_atoi("+000000000000000000008"), atoi("+000000000000000000008"));
 	return (0);
 }*/
-
 //Sample
 /* ローカル変数でstrを代入してから最後に戻す方法 */
 // static void	judge_sign(const char **str, int *sign)
