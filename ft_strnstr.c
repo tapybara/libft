@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 21:23:43 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/23 00:15:58 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 19:46:55 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t		needle_len;
+	size_t		haystack_len;
 	const char	*haystack_end;
 
 	if (!*needle)
 		return ((char *)haystack);
-	if (len == 0 || ft_strlen(haystack) < len)
+	if (len == 0)
 		return (NULL);
 	needle_len = ft_strlen(needle);
+	haystack_len = ft_strlen(haystack);
+	if (len > haystack_len)
+		len = haystack_len;
 	haystack_end = haystack + len - needle_len;
 	while (haystack <= haystack_end)
 	{
@@ -60,12 +64,22 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 int main()
 {
+	printf("%s : %s\n", "ft", "lib");
+	
+	// For original tests
 	char	*s1 = "MZIRIBMZIRIBMZE123";
 	char	*s2 = "bbbbbb";
-	size_t	max = 100;
-    
-	printf("%s : %s\n", "ft", "lib");
+	size_t	max = 1000;
     printf("%s : %s\n", ft_strnstr(s1, s2, max), strnstr(s1, s2, max));
+
+	// For libftTester-forReloaded
+	char haystack[30] = "aaabcabcd";
+	char needle[10] = "aabc";
+
+	printf("%s : %s\n", ft_strnstr(haystack, needle, -1), haystack + 1);
+	printf("%s : %s\n", ft_strnstr(haystack, "a", -1), haystack);
+	printf("%s : %s\n", ft_strnstr(haystack, "c", -1), haystack + 4);
+    
     // printf("%s : %s\n", ft_strnstr(s1, "ab", 5), strnstr(s1, "ab", 5));
     // printf("%s : %s\n", ft_strnstr(s1, "abc", 5), strnstr(s1, "abc", 5));
     // printf("%s : %s\n", ft_strnstr(s1, "abc", 0), strnstr(s1, "abc", 0));
