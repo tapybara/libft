@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 11:57:59 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/23 19:01:43 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 20:02:03 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ int main(void)
 	// Libft^tester-tokyo: tests
 	printf("FT %d :STD %d\n", ft_atoi("+1"), atoi("+1"));
 	printf("FT %d :STD %d\n", ft_atoi("+7"), atoi("+7"));
-	printf("FT %d :STD %d\n", ft_atoi("+000000000000000000008"), atoi("+000000000000000000008"));
 	return (0);
 }*/
 //Sample

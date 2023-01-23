@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 18:02:33 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/23 00:04:34 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/23 20:05:57 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	const unsigned char	*str1 = (const unsigned char *)s1;
-	const unsigned char	*str2 =	(const unsigned char *)s2;
+	const unsigned char	*str2 = (const unsigned char *)s2;
 
 	while (n--)
 	{
