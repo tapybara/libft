@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:34:33 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/24 21:22:31 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/25 20:52:03 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	
+
 	if (!s)
 		return (NULL);
 	if (start > ft_strlen(s) || len < 0)
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-
+/*
 #include <stdio.h>
 
 size_t	ft_strlen(const char *s)
@@ -75,5 +75,5 @@ int main()
 	//libftTester-forReloaded
 	char *s2 = "tripouille";
     printf("13. : %s\n", ft_substr(s2, 0, 42000));
-	// /* Error */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
-}
+	// mcheck(s, strlen("tripouille") + 1); free(s); showLeaks(); //Error
+}*/
