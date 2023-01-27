@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 22:13:03 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/27 23:58:56 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/28 00:02:55 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,13 +115,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 int main(void)
 {
 	// libft-tester-tokyo
-	printf("[hello ]       :[%s]\n", ft_strtrim("hello world", "world"));
-	printf("[ world]       :[%s]\n", ft_strtrim("hello world", "hello"));
-	printf("[hello world]  :[%s]\n", ft_strtrim("hello world", ""));
-	printf("[hello world]  :[%s]\n", ft_strtrim("    hello world     ", " "));
-	printf("[ ]            :[%s]\n", ft_strtrim("hello world", "abcdefghijklmnopqrstuvwxyz"));
+	printf("[hello ]:[%s]\n", ft_strtrim("hello world", "world"));
+	printf("[ world]:[%s]\n", ft_strtrim("hello world", "hello"));
+	printf("[hello world]:[%s]\n", ft_strtrim("hello world", ""));
+	printf("[hello world]:[%s]\n", ft_strtrim("    hello world     ", " "));
+	printf("[ ]:[%s]\n", ft_strtrim("hello world", "abcdefghijklmnopqrstuvwxyz"));
 	// libft-unit-test
-	printf("[]             :[%s]\n", ft_strtrim("  \t \t \n   \n\n\n\t", TRIM_SET_PLACEHOLDER));
-	printf("[]             :[%s]\n", ft_strtrim(NULL, TRIM_SET_PLACEHOLDER));
+	printf("[]:[%s]\n", ft_strtrim("  \t \t \n   \n\n\n\t", TRIM_SET_PLACEHOLDER));
+	printf("[]:[%s]\n", ft_strtrim(NULL, TRIM_SET_PLACEHOLDER));
 }
 */
