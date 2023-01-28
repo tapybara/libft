@@ -6,13 +6,13 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 16:03:26 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/28 16:47:14 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/28 16:52:57 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
 	size_t	len;
