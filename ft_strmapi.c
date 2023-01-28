@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 16:03:26 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/28 16:52:57 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/28 18:48:56 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len;
 	size_t	index;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
 	str = (char *)malloc(sizeof(char) * (len + 1));

@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 16:56:20 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/28 17:26:58 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/28 18:49:12 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t	len;
 	size_t	index;
 
-	if (!s)
+	if (!s || !f)
 		return ;
 	len = ft_strlen(s);
 	index = 0;
