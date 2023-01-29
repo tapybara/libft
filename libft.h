@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 01:44:28 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/29 02:06:47 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/01/29 16:17:33 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 # include <limits.h>	//For LONG_MAX & LONG_MIN
 # include <unistd.h>	//For write function
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void	*content;
+	void			*content;
 	struct s_list	*next;
 }	t_list;
 
