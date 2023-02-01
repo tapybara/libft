@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 22:13:03 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/28 00:02:55 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/02/01 19:33:16 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	trimed_size;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	trimed_size = 1;
 	start = get_startpoint(s1, set);
