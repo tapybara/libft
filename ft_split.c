@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 00:06:00 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/28 15:50:03 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/02/01 19:31:18 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	**substr_allocate(char **str, char const *s, size_t size, char c)
 		while (s[p] != c && s[p] != '\0')
 			p++;
 		end = p++;
-		str[index] = ft_substr(s, start, end - start);
+		str[index] = ft_substr(s + start, 0, end - start);
 		if (str[index] == NULL)
 			return (free2d(str, index));
 		index++;
