@@ -6,25 +6,25 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 21:06:15 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/27 22:07:03 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/02/01 20:23:03 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	reverse_sort(char **str)
+static void	reverse_sort(char *str)
 {
 	char	temp;
 	size_t	len;
 	size_t	i;
 
 	i = 0;
-	len = ft_strlen(*str) - 1;
+	len = ft_strlen(str) - 1;
 	while (i <= len / 2)
 	{
-		temp = (*str)[i];
-		(*str)[i] = (*str)[len - i];
-		(*str)[len - i] = temp;
+		temp = str[i];
+		str[i] = str[len - i];
+		str[len - i] = temp;
 		i++;
 	}
 }
@@ -68,7 +68,7 @@ char	*ft_itoa(int n)
 			str[i++] = '-';
 	}
 	str[i] = '\0';
-	reverse_sort(&str);
+	reverse_sort(str);
 	return (str);
 }
 
