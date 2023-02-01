@@ -6,7 +6,7 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:34:33 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/01/26 00:12:55 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/02/01 19:00:28 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
-	if (start >= ft_strlen(s))
-		len = 0;
+	if (start > ft_strlen(s))
+		start = ft_strlen(s);
+	if (start + len >= ft_strlen(s))
+		len = ft_strlen(s) - start;
 	sub = (char *)malloc(len + 1);
 	if (!sub)
 		return (NULL);
