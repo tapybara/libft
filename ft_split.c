@@ -6,13 +6,13 @@
 /*   By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 00:06:00 by okuyamataka       #+#    #+#             */
-/*   Updated: 2023/02/01 19:31:18 by okuyamataka      ###   ########.fr       */
+/*   Updated: 2023/02/01 19:34:23 by okuyamataka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	sprit_count(char const *s, char c)
+static size_t	split_count(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	size = sprit_count(s, c);
+	size = split_count(s, c);
 	str = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!str)
 		return (NULL);
