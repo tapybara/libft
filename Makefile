@@ -6,7 +6,7 @@
 #    By: okuyamatakahito <okuyamatakahito@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/15 01:48:14 by okuyamataka       #+#    #+#              #
-#    Updated: 2023/01/31 21:43:08 by okuyamataka      ###   ########.fr        #
+#    Updated: 2023/03/01 19:29:35 by okuyamataka      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,19 +20,12 @@ SRCS =	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
 		ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
 		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
-		ft_putendl_fd.c ft_putnbr_fd.c ft_lstlast.c \
-
-OBJS	= $(SRCS:%.c=%.o)
-
-BONUS =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+		ft_putendl_fd.c ft_putnbr_fd.c \
+		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
 		ft_lstiter.c ft_lstmap.c
-		
-BONUS_OBJS	= $(BONUS:.c=.o)
 
-ifdef WITH_BONUS
-OBJS += $(BONUS_OBJS)
-endif
+OBJS	= $(SRCS:%.c=%.o)
 
 CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror
@@ -48,12 +41,10 @@ $(NAME):	$(OBJS)
 all:	$(NAME)
 
 clean:
-		rm -f $(OBJS) $(BONUS_OBJS)
+		rm -f $(OBJS)
 
 fclean:		clean
 			rm -f $(NAME)
 
-re:			fclean all
-
-bonus:
-	make all WITH_BONUS=1
+re:			fclean
+			make all
